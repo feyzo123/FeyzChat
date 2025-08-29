@@ -1,36 +1,28 @@
-*{box-sizing:border-box}
-body{margin:0;font-family:system-ui,Segoe UI,Arial,Helvetica,sans-serif;background:#0f0f10;color:#e7e7ea}
-a{color:inherit}
-.by{opacity:.7;font-weight:500}
+*{box-sizing:border-box} body{margin:0;font-family:system-ui,Segoe UI,Arial,Helvetica,sans-serif}
+a{color:inherit} .by{opacity:.8}
 .alert{background:#3a0d0d;color:#ffb9b9;padding:10px;border-radius:10px;margin:10px 0}
 .ok{background:#0d3a1f;color:#b9ffd4;padding:10px;border-radius:10px;margin:10px 0}
-
-.login{display:grid;place-items:center;min-height:100vh}
+.login{display:grid;place-items:center;min-height:100vh;background:#0f0f10;color:#e7e7ea}
 .card{width:min(520px,92vw);background:#151518;border:1px solid #24242a;border-radius:16px;padding:22px;box-shadow:0 10px 30px rgba(0,0,0,.35)}
 .form input{width:100%;padding:12px 14px;margin:.35rem 0;border-radius:12px;border:1px solid #2a2a30;background:#101014;color:#e7e7ea}
 .form .row{display:flex;gap:10px;justify-content:space-between;align-items:center;margin-top:.25rem}
 .mode{display:flex;align-items:center;gap:6px;opacity:.9}
 
-.topbar{position:sticky;top:0;z-index:2;background:#141417;border-bottom:1px solid #23232a;display:flex;justify-content:space-between;align-items:center;padding:10px 14px}
-#online{opacity:.9}
-
-.chat{height:calc(100vh - 160px);overflow:auto;padding:14px;display:flex;flex-direction:column;gap:8px;background:#0f0f12}
+.topbar{position:sticky;top:0;z-index:2;background:#141417;border-bottom:1px solid #23232a;color:#e7e7ea;display:flex;justify-content:space-between;align-items:center;padding:10px 14px}
+.chat{height:calc(100vh - 170px);overflow:auto;padding:14px;display:flex;flex-direction:column;gap:8px;background:#0f0f12}
 .message{max-width:85%;padding:10px 12px;border-radius:14px;line-height:1.35;word-wrap:break-word;white-space:pre-wrap;border:1px solid #2b2b32;background:#1a1a20;color:#eef}
 .mine{align-self:flex-end;background:#17331d;border-color:#254e2f}
 .meta{font-size:.72rem;opacity:.75;margin-top:4px}
 .bubble{display:block}
-
 .attach{margin-top:8px}
 .btn-file{position:relative;display:inline-flex;align-items:center;gap:6px;padding:8px 12px;border-radius:10px;border:1px dashed #3a3a44;cursor:pointer;opacity:.95}
 .btn-file input{position:absolute;inset:0;opacity:0;cursor:pointer}
-.composer{position:sticky;bottom:0;background:#141417;border-top:1px solid #23232a;padding:10px 14px}
+.composer{position:sticky;bottom:0;background:#141417;border-top:1px solid #23232a;color:#e7e7ea;padding:10px 14px}
 .composer .row{display:flex;gap:8px}
 #msg{flex:1;border-radius:12px;border:1px solid #2a2a30;background:#101014;color:#e7e7ea;padding:10px}
-#send,#rec,#refresh{border:0;border-radius:12px;background:#2563eb;color:#fff;padding:10px 14px;cursor:pointer}
-#rec{background:#7c3aed}
-#refresh{background:#16a34a}
-
-.typing{min-height:20px;opacity:.8;margin:6px 14px}
+#send,#rec,#refresh,#emojiBtn{border:0;border-radius:12px;background:#2563eb;color:#fff;padding:10px 14px;cursor:pointer}
+#rec{background:#7c3aed} #refresh{background:#16a34a}
+.typing{min-height:20px;opacity:.85;margin:6px 14px}
 
 img.thumb{max-width:230px;max-height:230px;border-radius:12px;display:block}
 video.thumb{max-width:260px;max-height:260px;border-radius:12px;display:block}
@@ -41,3 +33,6 @@ body.nokia .chat{background:#dff3be}
 body.nokia .message{background:#f6ffe5;border-color:#cfe5a9;color:#111}
 body.nokia .mine{background:#d2ffd0;border-color:#9de59a}
 .nokia-note{padding:8px 12px;background:#eef9d1;color:#123;border-bottom:1px solid #c2dea0}
+
+.emoji-bar{margin-top:8px;padding:8px 10px;border:1px solid #2b2b32;border-radius:10px;background:#1a1a20;display:flex;gap:6px;flex-wrap:wrap}
+.emoji-bar button{border:0;background:transparent;font-size:20px;cursor:pointer}
