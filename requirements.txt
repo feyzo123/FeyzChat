@@ -1,3 +1,10 @@
-Flask==3.0.2
-SQLAlchemy==2.0.32
-waitress==2.1.2
+flask==3.0.3
+flask-socketio==5.3.6
+eventlet==0.36.1
+gevent==24.2.1
+gevent-websocket==0.10.1
+gunicorn==21.2.0
+emoji==2.12.1
+pip==25.1.1
+setuptools
+wheel
