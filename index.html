@@ -9,14 +9,13 @@
 <body class="login">
   <div class="card">
     <h1>FeyzChat <span class="by">| by Feyzullah</span></h1>
-
     {% if error %}<div class="alert">{{ error }}</div>{% endif %}
     {% if ok %}<div class="ok">{{ ok }}</div>{% endif %}
 
     <form method="post" class="form">
       <input type="text" name="username" placeholder="Kullanıcı adı" required>
       <input type="text" name="room" placeholder="Oda adı" required>
-      <input type="password" name="password" placeholder="Oda şifresi (kur veya katıl)">
+      <input type="password" name="password" placeholder="Oda şifresi (kur/katıl)">
       <div class="row">
         <label class="mode"><input type="radio" name="mode" value="modern" checked> Modern</label>
         <label class="mode"><input type="radio" name="mode" value="nokia"> Nokia</label>
