@@ -5,43 +5,38 @@
 <title>FeyzChat</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link href="/style.css" rel="stylesheet">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.7.5/socket.io.min.js"></script>
 </head>
 <body class="{{ 'modern' if mode=='modern' else 'nokia' }}">
   <header class="topbar">
-    <div class="left">
-      <strong>FeyzChat</strong> <span class="by">| by Feyzullah</span>
-    </div>
+    <div class="left"><strong>FeyzChat</strong> <span class="by">| by Feyzullah</span></div>
     <div class="right">
-      <span id="online" title="çevrimiçi">📮 1</span>
+      <span id="onlineBadge">🟢 1</span>
     </div>
   </header>
 
   {% if mode=='nokia' %}
-  <div class="nokia-note">Nokia modu: sadece yazı + resim. Video/ses indirme olarak görünür. Aşağıdaki <b>YENİLE</b> ile güncelle.</div>
+    <div class="nokia-note">Nokia modu: yazı + resim. Video/ses <b>indir</b> olarak görünür. Aşağıdaki <b>YENİLE</b> butonunu kullan.</div>
   {% endif %}
 
-  <main id="chatScroll" class="chat">
-    <!-- mesajlar -->
-  </main>
-
+  <main id="messages" class="chat"></main>
   <div id="typing" class="typing"></div>
 
   <footer class="composer">
     <div class="row">
       <input id="msg" type="text" placeholder="Mesaj yaz..." autocomplete="off">
-      <button id="send">Gönder</button>
+      <button id="emojiBtn" type="button">😊</button>
+      <button id="send" type="button">Gönder</button>
     </div>
-
     <div class="row attach">
       {% if mode=='modern' %}
-        <label class="btn-file">Foto/Video/Ses<input id="file" type="file" accept="image/*,video/*,audio/*,.pdf,.zip,.doc,.docx,.ppt,.pptx,.xlsx,.txt"></label>
+        <label class="btn-file">Foto/Video/Ses<input id="file" type="file" accept="image/*,video/*,audio/*,.pdf,.zip,.txt,.doc,.docx,.ppt,.pptx,.xls,.xlsx"></label>
         <button id="rec" type="button">🎙️ Ses Kaydı</button>
       {% else %}
-        <label class="btn-file">Resim veya Dosya<input id="file" type="file" accept="image/*,.pdf,.zip,.txt"></label>
+        <label class="btn-file">Resim/Dosya<input id="file" type="file" accept="image/*,.pdf,.zip,.txt"></label>
         <button id="refresh" type="button">YENİLE</button>
       {% endif %}
     </div>
+    <div id="emojiBar" class="emoji-bar" hidden>😀😂😍🔥🥳👍🙏❤️😎😭😡😉😅✨💯</div>
   </footer>
 
   <script>
