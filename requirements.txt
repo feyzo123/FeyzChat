@@ -1,6 +1,7 @@
 Flask==3.0.2
 Flask-SocketIO==5.3.6
 gunicorn==21.2.0
-eventlet==0.36.1
-gevent==24.2.1
+eventlet==0.33.3
+gevent==21.12.0
+greenlet==1.1.3
 SQLAlchemy==2.0.32
