@@ -1,7 +1,7 @@
-flask==3.0.3
+flask==2.3.2
 flask-socketio==5.3.6
-eventlet==0.36.1
-gevent==24.2.1
+eventlet==0.33.3
+gevent==21.12.0
 gevent-websocket==0.10.1
-gunicorn==21.2.0
-emoji==2.12.1
+gunicorn==20.1.0
+emoji==2.8.0
